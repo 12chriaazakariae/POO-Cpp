@@ -30,9 +30,9 @@ void inverse_wtab(int *arr,int n){
         rra [m] = arr[i];
         m--;
     }
-    cout << "l'inverse est : "<<endl;
+    cout << "\n l'inverse est : "<<endl;
     for (int i = 0; i < n; i++){
-        cout << rra[i]<<endl;
+        cout << "\t"<<rra[i]<<endl;
     }
     delete[] rra;
 }
@@ -46,6 +46,12 @@ int main(){
     afficher(arr,n);
     int &max = trouverMax(arr,n);
     cout << "le numero maximale est: "<< max <<endl;
+    int ex = max;
+    max = 100;
+    afficher(arr,n);
+    max = ex;
+
+
     inverse_wtab(arr,n);
     
     delete[] arr;
